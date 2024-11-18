@@ -1,0 +1,14 @@
+*.o
+a.out
+*.exe
+
+p2c
+c2p
+
+fifotest
+fifotest_c
+fifotest_p
+
+*~
+.DS_Store
+
