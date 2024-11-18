@@ -1,4 +1,4 @@
-// p.c: parent
+// fifotest_p: parent
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -12,7 +12,6 @@ int main() {
     unsigned char k = 0;
     write(p2c, &k, 1);
     for (int i = 0; i < n; i++) {
-        // while (read(c2p, &k, 1) < 1);
         read(c2p, &k, 1);
         printf("parent: %d\n", k);
         k = k + 1;

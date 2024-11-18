@@ -1,4 +1,4 @@
-// c.c: child
+// fifotest_c: child
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -11,7 +11,6 @@ int main() {
     int c2p = open("c2p", O_WRONLY);
     unsigned char k;
     for (int i = 0; i < n; i++) {
-        // while (read(p2c, &k, 1) < 1);
         read(p2c, &k, 1);
         printf("child : %d\n", k);
         k = k + 1;
